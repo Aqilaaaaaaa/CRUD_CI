@@ -38,12 +38,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<?php foreach ($queryAlltoko as $row) : ?>
 		<tr>
-			<td><?php echo $row['Id']; ?></td>
-			<td><?php echo $row['Judul']; ?></td>
-			<td><?php echo $row['Pengarang']; ?></td>
-			<td><?php echo $row['Penerbit']; ?></td>
-			<td><?php echo $row['Tahun']; ?></td>
-			<td><?php echo $row['Status']; ?></td>
+			<td><?php echo $row->id ?></td>
+			<td><?php echo $row->Judul ?></td>
+			<td><?php echo $row->Pengarang ?></td>
+			<td><?php echo $row->Penerbit ?></td>
+			<td><?php echo $row->Tahun ?></td>
+			<td><?php echo $row->Status ?></td>
+			<td><a href="<?php echo base_url('/tokoku/hal_edit') ?>/<?php echo $row->id ?>">Edit </a> | <a href="<?php echo base_url('tokoku/funcDel') ?>/<?php echo $row->id ?>">Delete</a></td>
 		</tr>
 	<?php endforeach; ?>
 </body>

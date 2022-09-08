@@ -4,6 +4,7 @@
 </head>
 <body>
     <h3>Masukkan Daftar Buku</h3>
+    <form action="<?php echo base_url('tokoku/funcAdd') ?>" method="post">
     <table>
         <tr>
             <td>Id</td>
@@ -39,5 +40,6 @@
             <td colspan="3"><button type="submit">Add List</button></td>
         </tr>
     </table>
+    </form>
 </body>
 </html>

@@ -8,4 +8,28 @@ class TokokuModel extends CI_Model {
         return $query->result();
          
     }
+
+    function insertDataBuku($data) 
+    {
+        $this->db->insert('buku', $data);
+    }
+
+    function getDataBukuDetail($id) 
+    {
+        $this->db->where('id', $id);
+        $query = $this->db->get('buku');
+        return $query->row();
+    }
+
+    function updateBuku($id, $data)
+    {
+        $this->db->where('id', $id);
+        $this->db->update('buku', $data);
+    }
+
+    function deleteBuku($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('buku');
+    }
 }
